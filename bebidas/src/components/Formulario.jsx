@@ -10,7 +10,7 @@ const Formulario = () => {
     });
 
     const { categorias } = useContext(CategoriasContext);
-    const { setConsultaReceta } = useContext(RecetasContext);
+    const { setBuscarReceta, setConsultando } = useContext(RecetasContext);
 
     //Función para leer los contenido
     const obtenerDatosReceta = e => {
@@ -25,7 +25,8 @@ const Formulario = () => {
             className='col-12'
             onSubmit={e => {
                 e.preventDefault();
-                setConsultaReceta(busqueda);
+                setBuscarReceta(busqueda);
+                setConsultando(true);
             }} >
 
             <fieldset className='text-center'>
