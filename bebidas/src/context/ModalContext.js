@@ -29,7 +29,9 @@ const ModalProvider = (props) => {
     return (
         <ModalContext.Provider
             value={{
-                setIdReceta
+                infoReceta,
+                setIdReceta,
+                setInfoReceta
             }}>
             {props.children}
         </ModalContext.Provider>
